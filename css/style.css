@@ -11,7 +11,7 @@
 
 /* Common styles for all screen sizes */
 body {
-  font-family: "Poppins", Arial, sans-serif; 
+  font-family: "Poppins", Arial, sans-serif; /* New professional font */
   font-size: 16px;
   font-weight: bold;
 }
@@ -41,7 +41,7 @@ nav .array-inputs #a_generate {
   background-color: transparent;
   border: none;
   outline: none;
-  color: #ff6b6b; 
+  color: #ff6b6b; /* New highlight color */
   padding: 0.5rem 0 0 20%;
 }
 
@@ -55,7 +55,7 @@ nav .header_right {
 }
 
 nav .header_right .nav-heading {
-  font-size: 2.5rem; 
+  font-size: 2.5rem; /* Larger heading */
   padding: 1rem 0;
 }
 
@@ -70,15 +70,15 @@ nav .header_right .algos {
 nav .header_right .algos button {
   background-color: transparent;
   border: none;
-  color: #ffffff; 
+  color: #ffffff; /* White text color */
   outline: none;
   padding: 1rem 0;
-  font-size: 1.8rem; 
+  font-size: 1.8rem; /* Larger font size */
 }
 
 nav .header_right .algos button:hover,
 nav .header_right .algos .butt_selected {
-  background-color: #14e6d1; 
+  background-color: #14e6d1; /* Lighter green */
   cursor: pointer;
 }
 
@@ -101,13 +101,13 @@ section .Complexity_Containers .Pair_Definitions p {
 }
 
 section .Complexity_Containers .Pair_Definitions p.Sub_Heading {
-  font-size: 1.2rem; 
+  font-size: 1.2rem; /* Slightly smaller font size */
   text-transform: none;
 }
 
 section #Info_Cont1,
 section #Info_Cont2 {
-  padding: 1.5rem 2rem; 
+  padding: 1.5rem 2rem; /* Increased padding */
 }
 
 section #Info_Cont1 h3,
@@ -145,12 +145,19 @@ section #Info_Cont2 h3 {
     padding: 1rem 0;
   }
 
-  nav .header_right .algos {
-    grid-template-columns: repeat(3, 1fr);
+  nav .header_right {
+    text-align: center; /* Center align for smaller screens */
   }
 
-  section {
-    grid-template-columns: 1fr;
+  nav .header_right .nav-heading {
+    font-size: 2rem; /* Reduce font size for smaller screens */
+    padding: 0.5rem 0; /* Adjust padding for better spacing */
+  }
+
+  nav .header_right .algos {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem; /* Reduce gap between buttons */
+    padding: 1rem 0;
   }
 
   section .Complexity_Containers .Pair_Definitions p.Sub_Heading {
