@@ -1,50 +1,48 @@
 /*
    Sorting Algorithm Visualizer Project by Kanishka Kumar
 */
+
+/* Reset styles and default font settings */
 * {
-  margin: 0px;
-  padding: 0px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: large;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Common styles for all screen sizes */
+body {
+  font-family: "Poppins", Arial, sans-serif; /* New professional font */
+  font-size: 16px;
   font-weight: bold;
 }
 
 nav {
-  background-color: #000000;
-  color: rgb(18, 230, 209);
-  display: -ms-grid;
+  background-color: #1a1a1a; /* Darker background color */
+  color: #e6e6e6; /* Light text color */
   display: grid;
-  -ms-grid-columns: 30% 60%;
   grid-template-columns: 30% 60%;
-  -webkit-column-gap: 10%;
   column-gap: 10%;
-  padding: 0% 5%;
+  padding: 1rem 5%;
 }
 
 nav .array-inputs {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 60% 40%;
   grid-template-columns: 60% 40%;
   place-content: center;
-  padding: 5% 0%;
+  padding: 1rem 0;
 }
 
-nav .array-inputs #a_size {
-  padding: 5% 0%;
-}
-
+nav .array-inputs #a_size,
 nav .array-inputs #a_speed {
-  padding: 5% 0%;
+  padding: 1rem 0;
 }
 
 nav .array-inputs #a_generate {
   background-color: transparent;
   border: none;
   outline: none;
-  color: orangered;
-  padding: 4% 0% 0% 0%;
-  padding-left: 20%;
+  color: #ff6b6b; 
+  padding: 0.5rem 0 0 20%;
 }
 
 nav .array-inputs #a_generate:hover {
@@ -52,74 +50,42 @@ nav .array-inputs #a_generate:hover {
 }
 
 nav .header_right {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 nav .header_right .nav-heading {
-  display: inline-block;
-  font-size: xxx-large;
-  padding: 3% 0%;
+  font-size: 2.5rem; 
+  padding: 1rem 0;
 }
 
 nav .header_right .algos {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (16.66667%) [6];
-  grid-template-columns: repeat(6, 16.66667%);
+  grid-template-columns: repeat(6, 1fr);
   place-content: center;
-  padding: 2% 0%;
+  gap: 1rem;
+  padding: 1rem 0;
 }
 
 nav .header_right .algos button {
   background-color: transparent;
   border: none;
-  color: white;
+  color: #ffffff; 
   outline: none;
-  padding: 5% 0%;
-  font-size: x-large;
+  padding: 1rem 0;
+  font-size: 1.8rem; 
 }
 
-nav .header_right .algos button:hover {
-  background-color: rgb(18, 230, 209);
-  cursor: pointer;
-}
-
-nav .header_right .algos .butt_locked {
-  background-color: transparent;
-  cursor: pointer;
-}
-
-nav .header_right .algos .butt_locked:hover {
-  background-color: transparent;
-  cursor: pointer;
-}
-
+nav .header_right .algos button:hover,
 nav .header_right .algos .butt_selected {
-  background-color: white;
-  color: rgb(18, 230, 209);
-}
-
-nav .header_right .algos .butt_selected:hover {
-  background-color: white;
-  cursor: pointer;
-}
-
-nav .header_right .algos .butt_unselected:hover {
-  background-color: orangered;
+  background-color: #14e6d1; 
   cursor: pointer;
 }
 
 section {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 20% 60% 20%;
   grid-template-columns: 20% 60% 20%;
+  gap: 1rem;
 }
 
 section .Complexity_Containers {
@@ -135,34 +101,59 @@ section .Complexity_Containers .Pair_Definitions p {
 }
 
 section .Complexity_Containers .Pair_Definitions p.Sub_Heading {
-  font-size: medium;
+  font-size: 1.2rem; 
   text-transform: none;
 }
 
-section #Info_Cont1 {
-  padding: 20% 10%;
+section #Info_Cont1,
+section #Info_Cont2 {
+  padding: 1.5rem 2rem; 
 }
 
-section #Info_Cont1 h3 {
+section #Info_Cont1 h3,
+section #Info_Cont2 h3 {
   text-decoration: underline;
 }
 
-section #array_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#array_container {
   display: flex;
   width: 100%;
   height: 70vh;
 }
 
-section #Info_Cont2 {
-  padding: 20% 10%;
-}
-
-section #Info_Cont2 h3 {
-  text-decoration: underline;
-}
-
 .hide {
   display: none;
+}
+
+/* Media Queries for responsive design */
+@media screen and (max-width: 768px) {
+  /* For tablet and mobile devices */
+  nav {
+    grid-template-columns: 1fr;
+  }
+
+  nav .array-inputs {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    row-gap: 1rem;
+    place-items: center;
+  }
+
+  nav .array-inputs #a_size,
+  nav .array-inputs #a_speed,
+  nav .array-inputs #a_generate {
+    padding: 1rem 0;
+  }
+
+  nav .header_right .algos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  section {
+    grid-template-columns: 1fr;
+  }
+
+  section .Complexity_Containers .Pair_Definitions p.Sub_Heading {
+    font-size: 1rem;
+  }
 }
