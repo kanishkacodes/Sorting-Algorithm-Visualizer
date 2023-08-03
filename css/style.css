@@ -146,18 +146,19 @@ section #Info_Cont2 h3 {
   }
 
   nav .header_right {
-    text-align: center; /* Center align for smaller screens */
+    text-align: center; 
   }
-
-  nav .header_right .nav-heading {
-    font-size: 2rem; /* Reduce font size for smaller screens */
-    padding: 0.5rem 0; /* Adjust padding for better spacing */
+nav .header_right .nav-heading {
+    font-size: 2rem; 
+    padding: 0.5rem 0; 
   }
 
   nav .header_right .algos {
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem; /* Reduce gap between buttons */
-    padding: 1rem 0;
+  }
+
+  section {
+    grid-template-columns: 1fr;
   }
 
   section .Complexity_Containers .Pair_Definitions p.Sub_Heading {
